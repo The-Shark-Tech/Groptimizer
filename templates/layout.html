@@ -17,15 +17,19 @@
     <div class="navbar-container navbar-hide">
       <div class="max-width">
         <div class="home-logo">
-          <img alt="image" src="/static/groptimizer-logo.png" class="home-image" />
-          <span class="brandName">Groptimizer</span>
+          <a href="/"><img alt="image" src="/static/groptimizer-logo.png" class="home-image" /></a>
+          <span class="brandName"><a href="/">Groptimizer</a></span>
         </div>
         <div class="home-links">
-          <span class="home-text01 navbarLink"><a href="#about-us">About</a></span>
-          <span class="home-text02 navbarLink"><a href="#mission"n>Mission</a></span>
-          <span class="home-text03 navbarLink"><a href="#contact-us">Contact Us</a></span>
-          <button class="button-secondary button"><a href="/login">Log in</a></button>
-          <button class="button button-primary"><a href="/register">Register</a></button>
+          {% if session["username"] %}
+            <button class="button button-primary"><a href="/logout">Logout</a></button>
+          {% else %}
+            <span class="home-text01 navbarLink"><a href="#about-us">About</a></span>
+            <span class="home-text02 navbarLink"><a href="#mission"n>Mission</a></span>
+            <span class="home-text03 navbarLink"><a href="#contact-us">Contact Us</a></span>
+            <button class="button-secondary button"><a href="/login">Log in</a></button>
+            <button class="button button-primary"><a href="/register">Register</a></button>
+          {% endif %}
         </div>
         <div class="home-burger-menu navbar-burger-menu">
           <svg viewBox="0 0 1024 1024" class="home-icon">

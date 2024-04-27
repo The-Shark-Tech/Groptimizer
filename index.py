@@ -1,5 +1,5 @@
 from flask import Flask, flash, redirect, render_template, request, session
-from flask_session import Session
+from flask import session
 from werkzeug.security import check_password_hash, generate_password_hash
 from pymongo import MongoClient, InsertOne
 import json
@@ -8,7 +8,6 @@ from pprint import pprint
 
 app = Flask(__name__)
 app.secret_key = 'groptimizer'
-app.config['MESSAGE_FLASHING_OPTIONS'] = {'duration': 5}
 
 client = MongoClient("mongodb+srv://loki:loki@cluster0.t4mij2c.mongodb.net/")
 db = client["Groptimizer"]
@@ -21,10 +20,12 @@ def home():
 
 @app.route("/login", methods=["GET","POST"])
 def login():
+    session.pop('username', None)
     if request.method == "POST":
 
         option = request.form['options']
         username = request.form.get("username")
+        session['username'] = request.form.get("username")
         password = request.form.get("password")
 
         if len(list(register_collection.find({"username": username, "option": option}))) == 0:
@@ -33,13 +34,24 @@ def login():
 
         for user_record in register_collection.find({"username": username, "option":option}):
             if check_password_hash(user_record['password'], password):
-                flash("Logged-In Successfully",'success')
-                return render_template("home.html")
+                if option == 'Groccery Store':
+                    session["username"] = username
+                    flash("Logged-In Successfully",'success')
+                    return render_template("dashboard-store.html")
+                else:
+                    session["username"] = username
+                    flash("Logged-In Successfully",'success')
+                    return render_template("dashboard-bank.html")
             else:
                 flash('Invalid Password','error')
                 return render_template('login.html')
     else:
         return render_template('login.html')
+    
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect('/')
     
 
 @app.route("/register", methods=["GET","POST"])
@@ -50,6 +62,7 @@ def register():
         name = request.form.get("name")
         address = request.form.get("address")
         username = request.form.get("username")
+        session['username'] = request.form.get("username")
         email = request.form.get("email")
         phno = request.form.get("phno")
         website = request.form.get("website")
@@ -68,7 +81,13 @@ def register():
 
         register_collection.insert_one(user)
         
-        flash('Registered Successfully', 'success')
-        return render_template("home.html")
+        if option == 'Groccery Store':
+            flash('Registered Successfully', 'success')
+            return render_template("dashboard-store.html")
+        else:
+            flash('Registered Successfully', 'success')
+            return render_template("dashboard-bank.html")
+
     else:
         return render_template("register.html")
+    
