@@ -1,15 +1,15 @@
+import os
 from flask import Flask, flash, redirect, render_template, request, session
 from flask import session
 from werkzeug.security import check_password_hash, generate_password_hash
 from pymongo import MongoClient, InsertOne
-import json
-from pprint import pprint
+from dotenv import load_dotenv
 
-
+load_dotenv()
 app = Flask(__name__)
-app.secret_key = 'groptimizer'
+app.secret_key = os.getenv("FLASK_SECRETKEY")
 
-client = MongoClient("mongodb+srv://loki:loki@cluster0.t4mij2c.mongodb.net/")
+client = MongoClient(os.getenv("MONGODB_KEY"))
 db = client["Groptimizer"]
 register_collection = db["Register"]
 
