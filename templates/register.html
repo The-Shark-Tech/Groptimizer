@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<form action="/register" method="post">
+  <div class="hero">
+    <div class="form-box-register">
+      <div class="login-title">
+        Register - Groptimizer 
+      </div>
+      <div class="input-group">
+        <div class="radio">
+          <label>Groccery Store</label>
+          <input type="radio" value="Groccery Store" name="options" onclick="updatePlaceholder(this)" required/>
+          <label>&nbsp;&nbsp; Food Bank </label>
+          <input type="radio" value="Food Bank" name="options"  onclick="updatePlaceholder(this)" />
+        </div>
+        <input type="text" class="input-field" name="name" id="name" placeholder="Name of Groccery Store" required />
+        <input type="text" class="input-field" name="address" placeholder="Address" required />
+        <input type="text" class="input-field" name="username" placeholder="Username" required />
+        <input type="text" class="input-field" name="email" placeholder="Email" required />
+        <input type="number" class="input-field" name="phno" placeholder="Phone Number" required />
+        <input type="text" class="input-field" name="website" placeholder="Website-URL (optional)"/>
+        <input type="password" class="input-field" name="password" placeholder="Enter Password"  required />
+        <div style="display:block"><input type="checkbox" class="check-box" />
+          <span class="login-remember-password">Remember Password</span></div>
+        <div style="justify-content: center;align-items:center;display:flex;width: 100%;">
+          <button type="submit" class="submit-btn">Register</button>
+        </div>
+      </div>
+      <img src="/static/login-poster.jpg" style="height:300px; width:600px; float:right; border-radius: 40px; margin-right: 5%;" alt="login-poster" />
+    </div>
+  </div>
+  <script>
+    function updatePlaceholder(radio) {
+      var name = document.getElementById("name");
+      name.placeholder = "Name of " + radio.value;
+    }
+  </script>
+</form>
+{% endblock %}
