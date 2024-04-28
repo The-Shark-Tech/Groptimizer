@@ -28,7 +28,19 @@ def cart():
             return render_template("home.html")
         else:
             return render_template('cart.html')
-        
+
+@app.route("/track", methods=["GET"])
+def track():
+    if request.method == "POST":
+        return render_template('order-details.html')
+    else:
+        if session.get('logged_in') is not True:
+            flash('Login To Access Tracking Details')
+            return render_template("home.html")
+        else:
+            return render_template('order-details.html')
+
+
 @app.route("/login", methods=["GET","POST"])
 def login():
     session.pop('username', None)
