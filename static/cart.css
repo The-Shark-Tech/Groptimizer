@@ -779,7 +779,7 @@ a {
 }
 .home-text04 {
   color: var(--dl-color-scheme-green80);
-  margin-bottom: var(--dl-space-space-unit);
+  margin-right: var(--dl-space-space-unit);
 }
 .home-text05 {
   font-size: 42px;
