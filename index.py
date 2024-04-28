@@ -18,6 +18,17 @@ def home():
     if request.method == "GET":
         return render_template("home.html")
 
+@app.route("/cart", methods=["GET","POST"])
+def cart():
+    if request.method == "POST":
+        return render_template('cart.html')
+    else:
+        if session.get('logged_in') is not True:
+            flash('Login To Access Cart')
+            return render_template("home.html")
+        else:
+            return render_template('cart.html')
+        
 @app.route("/login", methods=["GET","POST"])
 def login():
     session.pop('username', None)
@@ -26,6 +37,7 @@ def login():
         option = request.form['options']
         username = request.form.get("username")
         session['username'] = request.form.get("username")
+        session['logged_in'] = True
         password = request.form.get("password")
 
         if len(list(register_collection.find({"username": username, "option": option}))) == 0:
@@ -36,10 +48,12 @@ def login():
             if check_password_hash(user_record['password'], password):
                 if option == 'Groccery Store':
                     session["username"] = username
+                    session['logged_in'] = True
                     flash("Logged-In Successfully",'success')
                     return render_template("dashboard-store.html")
                 else:
                     session["username"] = username
+                    session['logged_in'] = True
                     flash("Logged-In Successfully",'success')
                     return render_template("dashboard-bank.html")
             else:
@@ -51,6 +65,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('username', None)
+    session.pop('logged_in', None)
     return redirect('/')
     
 
@@ -82,9 +97,13 @@ def register():
         register_collection.insert_one(user)
         
         if option == 'Groccery Store':
+            session["username"] = username
+            session['logged_in'] = True
             flash('Registered Successfully', 'success')
             return render_template("dashboard-store.html")
         else:
+            session["username"] = username
+            session['logged_in'] = True
             flash('Registered Successfully', 'success')
             return render_template("dashboard-bank.html")
 

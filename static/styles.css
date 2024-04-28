@@ -847,3 +847,29 @@
 .vertical-line {
   border-left: thick solid #024013;
 }
+
+
+.button2 {
+  color: var(--dl-color-scheme-green100);
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 24px;
+  border-color: var(--dl-color-scheme-green100);
+  border-width: 2px;
+  border-radius: 32px;
+  background-color: var(--dl-color-scheme-white);
+}
+.button-primary2 {
+  color: var(--dl-color-scheme-white);
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Lexend;
+  font-weight: 500;
+  line-height: 1;
+  border-color: #105749ff;
+  background-color: var(--dl-color-scheme-green80);
+}
+.button-primary2:hover {
+  color: var(--dl-color-scheme-green80);
+  background-color: var(--dl-color-scheme-lightgreen);
+}
