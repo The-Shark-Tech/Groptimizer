@@ -670,7 +670,7 @@
   display: none;
 }
 
-.max-width {
+.max-width2 {
   width: 100%;
   display: flex;
   max-width: var(--dl-size-size-maxwidth);
