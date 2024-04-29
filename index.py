@@ -51,10 +51,29 @@ def track():
         else:
             return render_template('order-details.html')
 
-@app.route("/dashboard", methods=["GET","POST"])
-def dashboard():
-    return
-
+@app.route("/dashboard-b", methods=["GET","POST"])
+def dashboard_b():
+    if session['option'] == "Food Bank":
+        if request.method == 'POST':
+            return render_template('dashboard-bank.html') 
+        else:
+            if session.get('logged_in') is True:
+                return render_template('dashboard-bank.html')
+            else:
+                flash("Login To Access")
+                return render_template('login.html')
+        
+@app.route("/dashboard-s", methods=["GET","POST"])
+def dashboard_s():
+    if session['option'] == "Groccery Store":
+        if request.method == 'POST':
+            return render_template('dashboard-store.html') 
+        else:
+            if session.get('logged_in') is True:
+                return render_template('dashboard-store.html')
+            else:
+                flash("Login To Access")
+                return render_template('login.html')
 
 @app.route("/login", methods=["GET","POST"])
 def login():
@@ -63,8 +82,6 @@ def login():
 
         option = request.form['options']
         username = request.form.get("username")
-        session['username'] = request.form.get("username")
-        session['logged_in'] = True
         password = request.form.get("password")
 
         if len(list(register_collection.find({"username": username, "option": option}))) == 0:
@@ -76,11 +93,13 @@ def login():
                 if option == 'Groccery Store':
                     session["username"] = username
                     session['logged_in'] = True
+                    session['option'] = request.form.get("options")
                     flash("Logged-In Successfully",'success')
                     return render_template("dashboard-store.html")
                 else:
                     session["username"] = username
                     session['logged_in'] = True
+                    session['option'] = request.form.get("options")
                     flash("Logged-In Successfully",'success')
                     return render_template("dashboard-bank.html")
             else:
@@ -92,6 +111,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('username', None)
+    session.pop('options', None)
     session.pop('logged_in', None)
     return redirect('/')
     
@@ -104,7 +124,6 @@ def register():
         name = request.form.get("name")
         address = request.form.get("address")
         username = request.form.get("username")
-        session['username'] = request.form.get("username")
         email = request.form.get("email")
         phno = request.form.get("phno")
         website = request.form.get("website")
@@ -126,11 +145,13 @@ def register():
         if option == 'Groccery Store':
             session["username"] = username
             session['logged_in'] = True
+            session['option'] = request.form.get("options")
             flash('Registered Successfully', 'success')
             return render_template("dashboard-store.html")
         else:
             session["username"] = username
             session['logged_in'] = True
+            session['option'] = request.form.get("options")
             flash('Registered Successfully', 'success')
             return render_template("dashboard-bank.html")
 
