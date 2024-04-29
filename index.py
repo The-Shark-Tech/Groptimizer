@@ -29,6 +29,17 @@ def cart():
         else:
             return render_template('cart.html')
 
+@app.route("/browse", methods=["GET","POST"])
+def browse():
+    if request.method == "POST":
+        return render_template('browse.html')
+    else:
+        if session.get('logged_in') is not True:
+            flash('Login To Browse Stores')
+            return render_template("home.html")
+        else:
+            return render_template('browse.html')
+
 @app.route("/track", methods=["GET"])
 def track():
     if request.method == "POST":

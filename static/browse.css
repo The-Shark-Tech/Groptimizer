@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.home-text04 {
+    color: var(--dl-color-scheme-green80);
+    margin-right: var(--dl-space-space-twounit);
+  }
 
 .hero-container{
     background-color: #105749ff;
@@ -225,3 +229,18 @@ svg {
     margin-left: 10px;
     margin-top: 20px;
 }
+
+.home-links-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .home-container9 {
+    width: 100%;
+    display: flex;
+    min-height: 35vh;
+    align-items: center;
+    flex-direction: column;
+  }
