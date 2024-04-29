@@ -62,6 +62,9 @@ def dashboard_b():
             else:
                 flash("Login To Access")
                 return render_template('login.html')
+    else:
+        flash("Login To Access")
+        return render_template('login.html')
         
 @app.route("/dashboard-s", methods=["GET","POST"])
 def dashboard_s():
@@ -74,6 +77,9 @@ def dashboard_s():
             else:
                 flash("Login To Access")
                 return render_template('login.html')
+    else:
+        flash("Login To Access")
+        return render_template('login.html')
 
 @app.route("/login", methods=["GET","POST"])
 def login():
