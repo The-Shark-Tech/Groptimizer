@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-container{
+    background-color: #105749ff;
+    min-height: 100%;
+    align-items: center;
+}
+
+
+.hero-text-container {
+    height: 20vh; /* Set height to 30% of viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-style: normal;
+    font-family: "Urbanist";
+}
+
+.search-container {
+    display: flex;
+    align-content: center;
+    padding-left: 590px;
+    padding-bottom: 5vh;
+    width: 70%;
+}
+
+input[type="text"] {
+    all: unset;
+    font: 16px system-ui;
+    flex: 1;
+    padding: 6px 10px;
+    color:white;
+    border-radius: 50px;
+    background-color: transparent;
+    border-color: black;
+    border-width: 2px;
+}
+
+input[type="text"]:hover {
+    all: unset;
+    font: 16px system-ui;
+    color:black;
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 40px;
+    height: 40px; 
+    color: #000 ;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth effect */
+}
+  
+
+svg {
+    color: #fff;
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+}
+
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left:1vh;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left:1vh;
+}
+
+
+.Ingredients-container {
+    display: flex;
+    position: relative; /* Make the container relative for absolute positioning */
+    padding: 20px;
+    margin-top: 50px;
+    white-space: nowrap; /* Prevent wrapping of images */
+}
+
+.Ingredients-container img {
+    margin-right: 20px; /* Adjust horizontal spacing */
+    max-height: calc(100vh - 150px); /* Reduce vertical height of images */
+    width: auto; /* Ensure images maintain aspect ratio */
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.Ingredients-container img:last-child {
+    margin-right: 0;
+}
+
+
+.images {
+    display: flex;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    
+}
+
+.image-title{
+    padding-left: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+}
+
+.image-title :hover{
+    background:black;
+    color: white;
+}
+
+
+
+/*The neccessary*/
+
+.line {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+
+.button-container {
+    position: absolute;
+    top: 440px;
+    display: flex;
+}
+
+.scroll-button {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+
+/*The neccessary*/
+
+
+
+.Store-container {
+    display: flex;
+    position: relative; /* Make the container relative for absolute positioning */
+    padding: 20px;
+    margin-top: 50px;
+    white-space: nowrap; /* Prevent wrapping of images */
+}
+
+.Store-container img {
+    margin-right: 20px; /* Adjust horizontal spacing */
+    max-height: calc(100vh - 150px); /* Reduce vertical height of images */
+    width: auto; /* Ensure images maintain aspect ratio */
+    padding-left: 20px;
+    padding-left: 20px;
+    padding-left: 20px;
+    border-radius: 40px;
+}
+
+.Store-container img:last-child {
+    margin-right: 0;
+}
+
+
+.images1 {
+    display: flex;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    
+}
+
+.store-title{
+    padding-left: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+}
+
+.store-title :hover{
+    background:black;
+    color: white;
+}
+
+
+.button-container1 {
+    padding-top: 5px;
+    display: flex;
+    margin-left: 10px;
+}
+
+
+.scroll-button1 {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 20px;
+}

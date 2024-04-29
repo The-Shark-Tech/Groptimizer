@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/browse.css" />
+  </head>
+
+  <body>
+    <div class="hero-container">
+      <div class="hero-text-container">
+        <div class="hero-text">
+          <h1>Search the Stores!</h1>
+        </div>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="query"
+          name="q"
+          placeholder="Enter your requirements.."
+          aria-label="Search through site content"
+        />
+        <button class="searching-button">
+          <svg viewBox="0 0 1024 1024">
+            <path
+              class="path1"
+              d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="line"></div>
+    <div>
+      <h1 style="font-size: 75px; text-align: center">Ingredients</h1>
+    </div>
+    <br />
+
+    <!-- Button Container -->
+
+    <!-- Line Break -->
+    <div class="line"></div>
+
+    <!-- New Container -->
+    <div class="Ingredients-container">
+      <div class="images">
+        <button class="left" id="scroll-left">
+          ←
+          <i class="fas fa-angle-double-left"></i>
+        </button>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=1"
+            alt="Random Image 1"
+          />
+          <div class="image-title">Ingredient 1</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=2"
+            alt="Random Image 2"
+          />
+          <div class="image-title">Ingredient 2</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=3"
+            alt="Image Title 9"
+          />
+          <div class="image-title">Ingredient 3</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=4"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 4</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=5"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 5</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=6"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 6</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=7"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 7</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=8"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 8</div>
+        </div>
+      </div>
+      <button class="right" id="scroll-right">
+        <i class="fas fa-angle-double-right">→</i>
+      </button>
+    </div>
+
+    <script>
+      const scrollLeftBtn = document.getElementById("scroll-left");
+      const scrollRightBtn = document.getElementById("scroll-right");
+      const imagesContainer = document.querySelector(".images");
+
+      scrollLeftBtn.addEventListener("click", function () {
+        const lastImage = imagesContainer.lastElementChild;
+        imagesContainer.removeChild(lastImage);
+        imagesContainer.insertBefore(
+          lastImage,
+          imagesContainer.firstElementChild
+        );
+      });
+
+      scrollRightBtn.addEventListener("click", function () {
+        const firstImage = imagesContainer.firstElementChild;
+        imagesContainer.removeChild(firstImage);
+        imagesContainer.appendChild(firstImage);
+      });
+    </script>
+
+    <br />
+    <br />
+    <br />
+    <div class="line"></div>
+    <div>
+      <h1 style="font-size: 75px; text-align: center">Stores Near You!</h1>
+    </div>
+    <br />
+    <div class="line"></div>
+
+    <!-- Button Container -->
+    <div class="button-container1">
+      <button id="scroll-left1" class="scroll-button1">←</button>
+      <button id="scroll-right1" class="scroll-button1">→</button>
+    </div>
+
+    <!-- New Container -->
+    <div class="Store-container">
+      <div class="images1">
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=1"
+            alt="Random Image 1"
+          />
+          <div class="image-title">Ingredient 1</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=2"
+            alt="Random Image 2"
+          />
+          <div class="image-title">Ingredient 2</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=3"
+            alt="Image Title 9"
+          />
+          <div class="image-title">Ingredient 3</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=4"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 4</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=5"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 5</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=6"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 6</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=7"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 7</div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://picsum.photos/200/300?random=8"
+            alt="Image Title 10"
+          />
+          <div class="image-title">Ingredient 8</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const scrollLeftBtn1 = document.getElementById("scroll-left1");
+      const scrollRightBtn1 = document.getElementById("scroll-right1");
+      const imagesContainer1 = document.querySelector(".images1");
+
+      scrollLeftBtn1.addEventListener("click", function () {
+        const lastImage1 = imagesContainer1.lastElementChild;
+        imagesContainer1.removeChild(lastImage1);
+        imagesContainer1.insertBefore(
+          lastImage1,
+          imagesContainer1.firstElementChild
+        );
+      });
+
+      scrollRightBtn1.addEventListener("click", function () {
+        const firstImage1 = imagesContainer1.firstElementChild;
+        imagesContainer1.removeChild(firstImage1);
+        imagesContainer1.appendChild(firstImage1);
+      });
+    </script>
+  </body>
+</html>
