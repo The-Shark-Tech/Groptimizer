@@ -6,6 +6,14 @@
   flex-direction: column;
 }
 
+.home-container9 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 10vh;
+  flex-direction: column;
+}
+
 .home-logo {
   display: flex;
   align-items: center;
@@ -1003,4 +1011,121 @@ a {
 .button-primary2:hover {
   color: var(--dl-color-scheme-green80);
   background-color: var(--dl-color-scheme-lightgreen);
+}
+
+/*dashboard-foodbank css*/
+
+.dash-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dash-foodbank {
+  margin-bottom: 30px;
+}
+
+#foodbank-table {
+  width: 100%;
+  border-collapse: collapse;
+  padding-top: 100px;
+}
+
+.dash-foodbank th,
+.dash-foodbank td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.dash-foodbank th {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.dash-restaurant {
+  margin-bottom: 30px;
+}
+
+.dash-restaurant table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dash-restaurant th,
+.dash-restaurant td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.dash-restaurant th {
+  background-color: #f2f2f2;
+}
+
+.additm-btn {
+  color: #ffffff;
+  background-color: #105749ff;
+  border-color: #105749ff;
+  border: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 8px;
+}
+
+.additm-btn:hover {
+  color: #105749ff;
+  background-color: #c7ff9bff;
+  border: 100px;
+  border-color: #105749ff;
+}
+
+.dash-container button :hover {
+  color: #105749ff;
+  background-color: #c7ff9bff;
+  border: 100px;
+  border-color: #105749ff;
+}
+
+.dash-bankh1 {
+  text-align: center;
+}
+
+/*alert box*/
+.alert-box {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alert-box h3 {
+  margin-top: 0;
+}
+
+.alert-box textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.alert-box button {
+  color: #ffffff;
+  background-color: #105749ff;
+  border-color: #105749ff;
+  padding: 10px 15px;
+  border: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.alert-box button:hover {
+  color: #105749ff;
+  background-color: #c7ff9bff;
+  border: 100px;
+  border-color: #105749ff;
 }

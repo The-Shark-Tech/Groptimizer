@@ -1,13 +1,106 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Groccery Store
+Groccery Store
 {% endblock %}
 
 {% block main %}
-<form action="/bank" method="post">
-    <h1>
-        FOOD BANK
-    </h1>
-</form>
+<div class="dash-container">
+    <h1 class="dash-bankh1">Dashboard</h1>
+    <div class="alert-box">
+        <h3>Alert Stores </h3>
+        <textarea id="alertMessage" placeholder="Type your message here..."></textarea>
+        <button onclick="sendAlert()">Send</button>
+    </div>
+
+    <div class="dash-foodbank">
+        <h2>Food Bank Inventory</h2>
+        <button class="additm-btn" onclick="addItem()">Add Item</button>
+        <table id="foodbank-table" style="margin-top:10px;">
+
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity (in kg)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inventory items will be dynamically added here -->
+                <tr>
+                    <td>Rice</td>
+                    <td><input type="number" value="100" min="0" disabled /></td>
+                    <td><button disabled>Remove</button></td>
+                </tr>
+                <tr>
+                    <td>Beans</td>
+                    <td><input type="number" value="50" min="0" disabled /></td>
+                    <td><button disabled>Remove</button></td>
+                </tr>
+                <tr>
+                    <td>Canned Vegetables</td>
+                    <td><input type="number" value="200" min="0" disabled /></td>
+                    <td><button disabled>Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="dash-restaurant">
+        <h2>Other Restaurants Inventory</h2>
+        <table>
+            <tr>
+                <th>Restaurant Name</th>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+            <!-- Replace the below rows with actual inventory data from other restaurants -->
+            <tr>
+                <td>Restaurant A</td>
+                <td>Rice</td>
+                <td>200 kg</td>
+            </tr>
+            <tr>
+                <td>Restaurant B</td>
+                <td>Beans</td>
+                <td>100 kg</td>
+            </tr>
+            <tr>
+                <td>Restaurant C</td>
+                <td>Canned Vegetables</td>
+                <td>300 cans</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+<div class="home-container9">
+    <footer class="home-footer">
+        <div class="home-links-container">
+            <div class="home-container4">
+                <div class="footer-column">
+                    <span class="home-text29">App</span>
+                    <span class="home-text32">Log in to Portal</span>
+                    <span class="home-text33">Administrative</span>
+                </div>
+                <div class="footer-column">
+                    <span class="home-text35">Organization</span>
+                    <span class="home-text36"><a href="#about-us">About</a></span>
+                    <span class="home-text37">Code of conduct</span>
+                    <span><a href="#contact-us">Contact Us</a></span>
+                </div>
+                <div class="footer-column">
+                    <span class="home-text39">Follow</span>
+                    <span class="home-text40">Instagram</span>
+                    <span class="home-text41">Twitter</span>
+                    <span class="home-text42">Facebook</span>
+                    <span class="home-text43">Linkedln</span>
+                    <span>Youtube</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="{{ url_for('static', filename='scriptbankdash.js') }}"></script>
 {% endblock %}

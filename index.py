@@ -51,6 +51,10 @@ def track():
         else:
             return render_template('order-details.html')
 
+@app.route("/dashboard", methods=["GET","POST"])
+def dashboard():
+    return
+
 
 @app.route("/login", methods=["GET","POST"])
 def login():
