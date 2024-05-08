@@ -177,7 +177,7 @@
 }
 
 .home-section1 {
-  background-color: rgba(255, 199, 139, 0.14);
+  background-color: rgba(255, 199, 139, 0.22);
   border-bottom: 2px dashed rgba(120, 120, 120, 0.4);
   border-top: 2px dashed rgba(120, 120, 120, 0.4);
 }
@@ -243,6 +243,14 @@
 
 .home-section3 {
   padding-top: 0px;
+  background-color: rgba(255, 199, 139, 0.14);
+  border-bottom: 2px dashed rgba(120, 120, 120, 0.4);
+  border-top: 2px dashed rgba(120, 120, 120, 0.4);
+}
+
+.home-section4 {
+  padding-top: 0px;
+  background-color: rgba(255, 199, 139, 0.08);
   border-bottom: 2px dashed rgba(120, 120, 120, 0.4);
   border-top: 2px dashed rgba(120, 120, 120, 0.4);
 }
@@ -299,6 +307,7 @@
   flex-direction: row;
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: space-between;
+
 }
 
 .home-links-container {
@@ -737,6 +746,16 @@
   padding-top: var(--dl-space-space-eightunits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-eightunits);
+}
+
+.section-container2 {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  padding-top: var(--dl-space-space-threeunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-oneunit);
 }
 
 .hero-container {

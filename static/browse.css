@@ -31,9 +31,9 @@
 .search-container {
     display: flex;
     align-content: center;
-    padding-left: 590px;
+    margin-left: 25%;
     padding-bottom: 5vh;
-    width: 70%;
+    width: 50%;
 }
 
 input[type="text"] {
