@@ -19,7 +19,7 @@
     <div class="search-container">
       <input type="text" id="query" name="q" placeholder="Enter your requirements.."
         aria-label="Search through site content" />
-      <button class="searching-button">
+      <button class="button searching-button">
         <svg viewBox="0 0 1024 1024">
           <path class="path1"
             d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
@@ -31,24 +31,14 @@
 
   <br />
   <br />
-  <div class="line"></div>
   <div>
-    <h1 style="font-size: 75px; text-align: center">Ingredients</h1>
+    <h1 style="font-size: 40px; text-align: left; padding-left:5%">Explore Ingredients</h1>
   </div>
-  <br />
-
-  <!-- Button Container -->
-
-  <!-- Line Break -->
-  <div class="line"></div>
 
   <!-- New Container -->
   <div class="Ingredients-container">
     <div class="images">
-      <button class="left" id="scroll-left">
-        ←
-        <i class="fas fa-angle-double-left"></i>
-      </button>
+      <button class="button left" id="scroll-left">←</button>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=1" alt="Random Image 1" />
         <div class="image-title">Ingredient 1</div>
@@ -81,10 +71,16 @@
         <img src="https://picsum.photos/200/300?random=8" alt="Image Title 10" />
         <div class="image-title">Ingredient 8</div>
       </div>
+      <div class="image-container">
+        <img src="https://picsum.photos/200/300?random=9" alt="Image Title 10" />
+        <div class="image-title">Ingredient 9</div>
+      </div>
+      <div class="image-container">
+        <img src="https://picsum.photos/200/300?random=10" alt="Image Title 10" />
+        <div class="image-title">Ingredient 10</div>
+      </div>
     </div>
-    <button class="right" id="scroll-right">
-      <i class="fas fa-angle-double-right">→</i>
-    </button>
+    <button class="button right" id="scroll-right">→</button>
   </div>
 
   <script>
@@ -108,58 +104,61 @@
     });
   </script>
 
+
   <br />
   <br />
   <br />
   <div class="line"></div>
   <div>
-    <h1 style="font-size: 75px; text-align: center">Stores Near You!</h1>
-  </div>
-  <br />
-  <div class="line"></div>
-
-  <!-- Button Container -->
-  <div class="button-container1">
-    <button id="scroll-left1" class="scroll-button1">←</button>
-    <button id="scroll-right1" class="scroll-button1">→</button>
+    <h1 style="font-size: 40px; text-align: left; padding-left: 5%">Stores Near You!</h1>
   </div>
 
   <!-- New Container -->
   <div class="Store-container">
     <div class="images1">
+      <button class="button left" id="scroll-left1">←</button>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=1" alt="Random Image 1" />
-        <div class="image-title">Ingredient 1</div>
+        <div class="image-title"><span class="navbarLink"><a href="/store">Store 1</a></span></div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=2" alt="Random Image 2" />
-        <div class="image-title">Ingredient 2</div>
+        <div class="image-title">Store 2</div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=3" alt="Image Title 9" />
-        <div class="image-title">Ingredient 3</div>
+        <div class="image-title">Store 3</div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=4" alt="Image Title 10" />
-        <div class="image-title">Ingredient 4</div>
+        <div class="image-title">Store 4</div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=5" alt="Image Title 10" />
-        <div class="image-title">Ingredient 5</div>
+        <div class="image-title">Store 5</div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=6" alt="Image Title 10" />
-        <div class="image-title">Ingredient 6</div>
+        <div class="image-title">Store 6</div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=7" alt="Image Title 10" />
-        <div class="image-title">Ingredient 7</div>
+        <div class="image-title">Store 7</div>
       </div>
       <div class="image-container">
         <img src="https://picsum.photos/200/300?random=8" alt="Image Title 10" />
-        <div class="image-title">Ingredient 8</div>
+        <div class="image-title">Store 8</div>
+      </div>
+      <div class="image-container">
+        <img src="https://picsum.photos/200/300?random=9" alt="Image Title 10" />
+        <div class="image-title">Store 9</div>
+      </div>
+      <div class="image-container">
+        <img src="https://picsum.photos/200/300?random=10" alt="Image Title 10" />
+        <div class="image-title">Store 10</div>
       </div>
     </div>
+    <button class="button right" id="scroll-right1">→</button>
   </div>
 
   <script>
@@ -182,6 +181,9 @@
       imagesContainer1.appendChild(firstImage1);
     });
   </script>
+  <br />
+  <br />
+  <div class="line"></div>
 
   <div class="home-container9">
     <footer class="home-footer">

@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.h21 {
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;
+    margin-bottom: 30px;
+    color: var(--dl-color-scheme-green80);
+    font-size: 28px;
+    font-family: Urbanist;
+}
+
+.b1 {
+    max-width: 800px;
+    min-height: 800px;
+    margin: 20px auto 0;
+}
+
+.h122 {
+    padding: 15px;
+}
+
+.h123 {
+    margin: 8px;
+    margin-top: 7px;
+    font-size: 15px;
+    color: slategray;
+    font-family: Urbanist;
+}
+
+.h10 {
+    background: linear-gradient(rgb(255, 255, 255) -6.71%, rgb(235, 235, 242) 56.19%, rgb(223, 223, 231) 106.56%);
+    padding: 0px 16px 16px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+
+.h124 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 8px 20px;
+    text-decoration: underline;
+    font-family: Urbanist;
+    font-size: 14px;
+    color: darkcyan;
+}
+
+.w12 {
+    margin: 1px;
+    padding: 1px;
+}
+
+.h125 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.h126 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(196, 196, 196);
+}
+
+.h127 {
+    width: 1px;
+    height: 23px;
+    background: rgb(196, 196, 196);
+}
+
+.h128 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(196, 196, 196);
+}
+
+.h129 {
+    display: flex;
+    margin: 0px 20px;
+    padding: 4px 0px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.h130 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.h131 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(196, 196, 196);
+}
+
+.h132 {
+    width: 1px;
+    height: 23px;
+    background: rgb(196, 196, 196);
+}
+
+.h133 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(196, 196, 196);
+}
+
+.h134 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 12px;
+    padding-right: 16px;
+    width: 100%;
+}
+
+.h135 {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.h136 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    ;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+}
+
+.h137 {
+    text-align: center;
+    max-width: 70%;
+    margin-left: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+    font-size: 15px;
+    font-family: Urbanist;
+    color: slategray;
+}
+
+.h138 {
+    display: flex;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+.h139 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    ;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+}
+
+.h122 {
+    border-radius: 20px;
+    border: 1px solid rgba(2, 6, 12, 0.15);
+    background: white;
+    box-shadow: #9AC2B8 0px 6px 16px 0px;
+}
+
+.h140 {
+    margin: 16px;
+}
+
+.h141 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 32px 0px 16px;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-family: Urbanist;
+    letter-spacing: 4px;
+}
+
+.h142 {
+    width: 100%;
+    padding: 0px 0px;
+    position: relative;
+}
+
+input[type="search"] {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    background: rgb(240, 240, 245);
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+::placeholder {
+    font-family: Urbanist;
+    font-size: 16px;
+    text-align: center;
+}
+
+input:focus {
+    border-style: inset;
+    border-color: #3fc0a0;
+}
+
+.h144 {
+    height: 0.5px;
+    background-color: rgb(226, 226, 231);
+    width: calc(100% - 32px);
+    margin: 24px auto;
+}
+
+.h145 {
+    position: relative;
+    margin: 24px 16px 16px;
+}
+
+.h146 {
+    margin-bottom: 24px;
+}
+
+.h147 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+    font-size: 1.15rem;
+}
+
+.h148 {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-right: 16px;
+    font-size: 1.15rem;
+    align-items: center;
+}
+
+.h149 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 700;
+    font-size: 1.32rem;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+    text-decoration: underline;
+}
+
+input {
+    border-style: solid;
+    border-color: #3fc0a0;
+}
+
+.h150 {
+    margin: 27px;
+}
+
+.h151 {
+    --fill-color: rgba(2, 6, 12, 0.92);
+    --stroke-color: rgba(2, 6, 12, 0.92);
+    line-height: 0;
+}
+
+button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+}
+
+.h152 {
+    padding: 4px 0px;
+}
+
+.h153 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.h154 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.75);
+    word-break: break-word;
+}
+
+.h155 {
+    border-bottom: .5px solid #d3d3d3;
+    height: .5px;
+    margin: 20px 0;
+    -webkit-animation: styles_openMenuDivider__1IdIb .4s ease-in-out forwards;
+    animation: styles_openMenuDivider__1IdIb .4s ease-in-out forwards;
+    width: 15%;
+}
+
+.h156 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.h157 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.h158 {
+    margin-right: 0px;
+}
+
+.h159 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+}
+
+.h160 {
+    font-family: Urbanist;
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.92);
+    margin-left: 2px;
+}
+
+.h161 {
+    display: flex;
+    margin-top: 12px;
+}
+
+.h162 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+    color: hotpink;
+}
+
+.h163 {
+    margin-left: 120px;
+    max-height: 164px;
+    min-width: 156px;
+}
+
+.h164 {
+    position: relative;
+    left: 50%;
+    bottom: 28px;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.h165 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.h166 {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(226, 226, 231);
+    height: 40px;
+    border-radius: 8px;
+    width: 120px;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    box-shadow: rgba(40, 44, 63, 0.08) 0px 3px 8px;
+}
+
+.h167 {
+    z-index: 1;
+    padding-left: 16px;
+    padding-right: 12px;
+    transition: all 100ms ease-in-out 0s;
+    transform: translateX(-64px);
+    appearance: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.h168 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: rgb(27, 166, 114);
+}
+
+.h169 {
+    position: absolute;
+    inset: 0px;
+}
+
+.h170 {
+    transition: all 100ms ease-in-out 0s;
+    height: 40px;
+    cursor: none;
+    pointer-events: none;
+    transform: translateY(-40px);
+    position: absolute;
+    width: 100%;
+    appearance: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.h171 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: rgb(27, 166, 114);
+}
+
+.h172 {
+    width: 120px;
+    position: absolute;
+    inset: 0px;
+    transition: all 100ms ease-in-out 0s;
+    transform: translateY(0px);
+    text-align: center;
+    appearance: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.h173 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: rgb(27, 166, 114);
+}
+
+.h174 {
+    transition: all 100ms ease-in-out 0s;
+    height: 40px;
+    cursor: none;
+    pointer-events: none;
+    transform: translateY(40px);
+    position: absolute;
+    width: 100%;
+    appearance: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.h175 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: rgb(27, 166, 114);
+}
+
+.h176 {
+    padding-right: 16px;
+    padding-left: 12px;
+    transition: all 100ms ease-in-out 0s;
+    transform: translateX(64px);
+    appearance: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.h177 {
+    -webkit-font-smoothing: antialiased;
+    font-family: Urbanist;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: rgb(27, 166, 114);
+}

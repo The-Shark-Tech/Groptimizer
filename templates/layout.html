@@ -31,13 +31,13 @@
         {% if session["username"] %}
         <span class="home-text01 navbarLink"><a href="/browse">Browse</a></span>
         <span class="home-text02 navbarLink"><a href="/cart">Cart</a></span>
-          {% if session["option"] == "Groccery Store" %}
-          <span class="home-text03 navbarLink"><a href="/dashboard-s">Dashboard</a></span>
-          {% else %}
-          <span class="home-text03 navbarLink"><a href="/dashboard-b">Dashboard</a></span>
-          {% endif %}
+        {% if session["option"] == "Groccery Store" %}
+        <span class="home-text03 navbarLink"><a href="/dashboard-s">Dashboard</a></span>
+        {% else %}
+        <span class="home-text03 navbarLink"><a href="/dashboard-b">Dashboard</a></span>
+        {% endif %}
         <span class="home-text04 navbarLink"><a href="/track">Track Orders</a></span>
-        <button class="button2 button-primary2"><a href="/logout">Logout</a></button>           
+        <button class="button2 button-primary2"><a href="/logout">Logout</a></button>
         {% else %}
         <span class="home-text01 navbarLink"><a href="#about-us">About</a></span>
         <span class="home-text02 navbarLink"><a href="#mission" n>Mission</a></span>

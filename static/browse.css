@@ -24,15 +24,16 @@
     color: black;
     font-size: 25px;
     font-style: normal;
-    font-family: "Urbanist";
+    font-family: "Urbanist" !important;
+    color: var(--dl-color-scheme-lightgreen);
 }
 
 .search-container {
     display: flex;
     align-content: center;
-    padding-left: 590px;
+    margin-left: 25%;
     padding-bottom: 5vh;
-    width: 70%;
+    width: 50%;
 }
 
 input[type="text"] {
@@ -47,6 +48,7 @@ input[type="text"] {
     border-width: 2px;
 }
 
+
 input[type="text"]:hover {
     all: unset;
     font: 16px system-ui;
@@ -57,16 +59,19 @@ input[type="text"]:hover {
     background-color: white;
 }
 
-button {
+.button {
     all: unset;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    color: #000;
-    border: none;
+    cursor: auto;
     border-radius: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Add transition for smooth effect */
+    padding: 6px;
+    vertical-align: center;
+}
+
+.searching-button:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
 }
 
 
@@ -81,18 +86,30 @@ svg {
 
 .left {
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 1vh;
+    left: 0.5%;
+    top: 37%;
+    font-size: 40px;
+    font-family: "Urbanist";
 }
 
 .right {
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 1vh;
+    right: 0.5%;
+    top: 37%;
+    font-size: 40px;
+    font-family: "Urbanist";
+}
+
+.left:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.right:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
 }
 
 
@@ -107,7 +124,8 @@ svg {
 }
 
 .Ingredients-container img {
-    margin-right: 20px;
+    margin-right: 26px;
+    margin-left: 5%;
     /* Adjust horizontal spacing */
     max-height: calc(100vh - 150px);
     /* Reduce vertical height of images */
@@ -130,7 +148,7 @@ svg {
 }
 
 .image-title {
-    padding-left: 20px;
+    text-align: center;
     font-size: 17px;
     font-weight: bold;
     color: #000;
@@ -185,15 +203,14 @@ svg {
 }
 
 .Store-container img {
-    margin-right: 20px;
+    margin-right: 26px;
+    margin-left: 5%;
     /* Adjust horizontal spacing */
     max-height: calc(100vh - 150px);
     /* Reduce vertical height of images */
     width: auto;
     /* Ensure images maintain aspect ratio */
-    padding-left: 20px;
-    padding-left: 20px;
-    padding-left: 20px;
+    padding: 20px;
     border-radius: 40px;
 }
 
