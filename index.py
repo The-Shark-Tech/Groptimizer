@@ -18,16 +18,49 @@ def home():
     if request.method == "GET":
         return render_template("home.html")
 
-@app.route("/cart", methods=["GET","POST"])
+@app.route("/cart", methods=["GET", "POST"])
 def cart():
     if request.method == "POST":
-        return render_template('cart.html')
+        # Get the cart data from the frontend
+        items = request.json.get("items", [])
+        
+        # Initialize the cart if it doesn't exist
+        if 'cart' not in session:
+            session['cart'] = []
+
+        # Update the cart in the session
+        for item in items:
+            # Check if the item already exists in the cart
+            existing_item = next((cart_item for cart_item in session['cart'] if cart_item['id'] == item['id']), None)
+            if existing_item:
+                # Update the quantity if item exists
+                existing_item['quantity'] += item['quantity']
+            else:
+                # Add new item to the cart
+                session['cart'].append(item)
+
+        # Commit the changes to the session
+        session.modified = True
+
+        # Return updated cart details
+        return {
+            "message": "Cart updated successfully",
+            "cart": session['cart'],
+            "total": calculate_cart_total(session['cart'])
+        }, 200
     else:
         if session.get('logged_in') is not True:
             flash('Login To Access Cart')
             return render_template("home.html")
         else:
             return render_template('cart.html')
+
+def calculate_cart_total(cart):
+    total = 0
+    for item in cart:
+        total += item['price'] * item['quantity']
+    return total
+
 
 @app.route("/store", methods=["GET","POST"])
 def store():
@@ -61,6 +94,10 @@ def track():
             return render_template("home.html")
         else:
             return render_template('order-details.html')
+
+@app.route('/checkout')
+def checkout():
+    return render_template('checkout.html')
 
 @app.route("/dashboard-b", methods=["GET","POST"])
 def dashboard_b():
